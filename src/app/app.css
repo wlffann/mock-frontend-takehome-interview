@@ -1,0 +1,156 @@
+:root {
+    --mustard: #D79922;
+    --tan: #EFE2BA;
+    --red: #F13C20;
+    --blue: #4056A1;
+    --periwinkle: #C5CBE3;
+    --dk-blue: #322F3B;
+}
+
+@font-face {
+    font-family: "Lora Regular";
+    src: url("../static/fonts/Lora-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lora Bold";
+    src: url("../static/fonts/Lora-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Karla Regular";
+    src: url("../static/fonts/Karla-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: 'Karla Regular', serif;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora Bold';
+    color: var(--dk-blue);
+}
+
+/*Nav styles*/
+
+nav {
+    padding: 12px;
+    background-color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    padding: 12px;
+}
+
+nav .SiteName {
+    display: flex;
+    align-items: center;
+}
+
+nav .SiteName h1 {
+    margin-left: 6px;
+}
+
+nav h1 {
+    color: white;
+    margin: 0;
+}
+
+/*Site Landing Page styles*/
+
+.WelcomeMessage {
+    text-align: center;
+    background-color: var(--periwinkle);
+    padding: 36px;
+    color: white;
+}
+
+.WelcomeMessage h2 {
+    margin-top: 0;
+}
+
+.BlogsList {
+    margin: 24px;
+}
+
+.BlogLink {
+    border-bottom: 2px solid  var(--mustard);
+}
+
+.BlogLink a {
+    text-decoration: none;
+}
+
+.BlogLinkTitle {
+    display: flex;
+    align-items: center;
+}
+
+.BlogLinkTitle a h3 {
+    color: var(--blue);
+    margin-right: 12px;
+}
+
+.BlogCategory {
+    background-color: var(--mustard);
+    color: white;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+/*Author Info*/
+.AuthorInfo {
+    display: flex;
+}
+
+img.AuthorAvatar{
+    border-radius: 100%;
+    background-color: var(--tan);
+    margin-right: 12px;
+}
+
+
+/*Blog Landing Page styles*/
+
+.BlogLandingPage {
+    text-align: center;
+}
+
+.BlogLandingPage .AuthorInfo {
+    justify-content: center;
+    align-items: center;
+}
+
+.PostList {
+    margin-top: 24px;
+    border-radius: 2px;
+    border-top: 2px solid var(--mustard);
+    text-align: start;
+    padding: 12px;
+}
+
+.PostLink a {
+    text-decoration: none;
+    color: var(--blue)
+}
+
+.PostLink h3 {
+    color: var(--blue);
+}
+
+.PostSummary {
+    display: flex;
+}
+
+.PostSummary img {
+    height: 150px;
+}
+
+.PostDescription {
+    padding: 24px;
+}
+

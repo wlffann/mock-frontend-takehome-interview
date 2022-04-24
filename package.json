@@ -1,0 +1,35 @@
+{
+  "name": "frontend-takehome-interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "parcel build src/app/index.html",
+    "server": "node ./src/api/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dicebear/avatars": "^4.10.2",
+    "@dicebear/miniavs": "^4.10.2",
+    "express": "^4.17.3",
+    "http-proxy-middleware": "^2.0.6",
+    "knex": "^2.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-feather": "^2.0.9",
+    "react-router-dom": "^6.3.0",
+    "sqlite3": "^5.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@faker-js/faker": "^6.2.0",
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.6.3"
+  }
+}
