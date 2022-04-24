@@ -1,4 +1,4 @@
-# Frontend Take Home Interview
+# Mock Frontend Take Home Interview
 
 This is a simple repo that can be used for mock interviews.
 
