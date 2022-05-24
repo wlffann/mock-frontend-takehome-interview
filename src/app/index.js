@@ -8,6 +8,7 @@ import {
 import { BlogLandingPage } from "./components/BlogLanding";
 import { Header } from "./components/Header";
 import { SiteLandingPage } from "./components/SiteLandingPage";
+import {PostPage} from "./components/PostPage";
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -16,6 +17,7 @@ root.render(
         <Header />
 
         <Routes>
+            <Route path="/post/:id" element={<PostPage />}/>
             <Route path="/blog/:id" element={<BlogLandingPage />}/>
             <Route path="/" element={<SiteLandingPage />}/>
         </Routes>

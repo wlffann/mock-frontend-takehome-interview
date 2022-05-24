@@ -28,9 +28,12 @@ app.get('/post/:id', async (req, res) => {
     const post = (await knex.select('*').from('posts').where('id', req.params.id).limit(1))[0];
     const blog = (await knex.select('*').from('blogs').where('id', post.blog_id))[0];
     const author = (await knex.select('*').from('users').where('id', blog.author_id))[0];
+    const comments = await knex.select('*').from('comments').where('post_id', req.params.id);
+    const commenters = await knex.select('*').from('users').whereIn('id', comments.map(comment =>  comment.user_id));
+    comments.forEach(comment => comment.author = commenters.find(user => user.id === comment.user_id));
 
-    res.send({...post, blog, author});
-})
+    res.send({...post, blog, author, comments});
+});
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

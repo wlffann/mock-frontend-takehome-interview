@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 
 const BlogLink = ({blog}) => {
     return (
-        <div className="BlogLink" key={blog.id}>
+        <div className="BlogLink">
             <div className="BlogLinkTitle">
                 <Link to={`/blog/${blog.id}`}><h3>{blog.title}</h3></Link>
                 <div className="BlogCategory">{blog.category}</div>
@@ -40,7 +40,7 @@ export const SiteLandingPage = () => {
         <div className="BlogsList">
             <h2>Check out some of our blogs below</h2>
             {blogs && blogs.map(blog => {
-                return <BlogLink blog={blog} />
+                return <BlogLink blog={blog} key={blog.id}/>
             })}
         </div>
     </>);

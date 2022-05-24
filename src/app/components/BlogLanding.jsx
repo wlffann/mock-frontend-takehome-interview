@@ -1,7 +1,5 @@
-import React, {useCallback, useEffect, useState} from 'react';
-import { useParams} from "react-router-dom";
-import { createAvatar } from '@dicebear/avatars';
-import * as style from '@dicebear/miniavs';
+import React, {useEffect, useState} from 'react';
+import {useParams} from "react-router-dom";
 import {AuthorInfo} from "./AuthorInfo";
 
 export const BlogLandingPage = () => {
@@ -37,7 +35,7 @@ export const BlogLandingPage = () => {
                         <img src={post.img_src} />
                         <div className="PostDescription">
                             <p>{`${post.body.substring(0, 50)}...`}</p>
-                            <a href={`/post/${id}`}>Read now</a>
+                            <a href={`/post/${post.id}`}>Read now</a>
                         </div>
                     </div>
                 </div>)
